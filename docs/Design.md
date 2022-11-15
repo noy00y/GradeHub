@@ -1,55 +1,29 @@
 <div align="center">
 
-# [Project Title Here]
+### CP317 Group Project
+# Software Design Document
 
-## Software Design Document
+### Group #13
+
+#### Aidan Traboulay, Harriharan Sivakumar, Ozair Khan, Shakib Ahmed
+
+### Date: 
 
 </div>
 
-<!-- Section 1 -->
-### 1. Project Description
-<hr>
-<!-- End Section 1 -->
+[========]
 
-<!-- Section 2 -->
-### 2. Overview
-<hr>
-<!-- End Section 2 -->
-
-<!-- Section 3 -->
-### 3. System Architecture
-<hr>
-<!-- End Section 3 -->
-
-<!-- Section 4 -->
-### 4. Data Dictionary
-<hr>
-<!-- End Section 4 -->
-
-<!-- Section 5 -->
-### 5. Domain Design
-<hr>
-<!-- End Section 5 -->
-
-<!-- Section 6 -->
-### 6. Data Design
-<hr>
-<!-- End Section 6 -->
-
-<!-- Section 7 -->
-### 7. User Interface Design
-<hr>
-<!-- End Section 7 -->
-
-<!-- Section 8 -->
-### 8. References
-<hr>
-<!-- End Section 8 -->
-
-<!-- Section 9 -->
-### 9. Glossary
-<hr>
-<!-- End Section 1 -->
-
-
-
+## Table of Contents
+<div id="toc_container">
+<p class="toc_title">Contents</p>
+<ul class="toc_list">
+  <li><a href="#First_Point_Header">1 First Point Header</a>
+  <ul>
+    <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>
+    <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
+  </ul>
+</li>
+<li><a href="#Second_Point_Header">2 Second Point Header</a></li>
+<li><a href="#Third_Point_Header">3 Third Point Header</a></li>
+</ul>
+</div>
