@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <fstream>
 using namespace std;
 // TODO: Error handling (offence tactic: accept no errors)
 
@@ -103,8 +104,34 @@ public: // Public Methods
         return;
     }
 
+    Student(string data){
+        // Default values
+        name = "None";
+        studentID = 0;
+        N = 0;
+
+        // Clean given data and set attributes based on it
+        remove(data,',');
+        stringstream strIn(data);
+        string line;
+        while (!strIn.fail()){
+            strIn >> line;
+            if (line.size()!=0){
+                if (isnum(line)){studentID=stoi(line);}
+                else {
+                    name=line;
+                    if (!strIn.fail()){
+                        strIn >> line;
+                        name+= " "+line;
+                    }
+                }
+            }
+        }
+    }
+
     // Function to add course (data as a string, fstream will be used and the inputs will be parsed to the constructor for course)
     void addCourse(string input){
+        remove(input,',');
         Course course(input);
         if (course.takenBy(studentID)){courses.push_back(course);N++;} else {cout<< course.code <<" was not taken by "<<name<<"."<<endl;}
         return;
@@ -129,13 +156,24 @@ int main(){
     // CourseFile.txt
     // sample data: 454730171, CP414, 69, 80, 72, 87
     
-    Student teddy("Teddy Hyde", 642176077);
-    string courseData = "642176077, PS263, 87, 76, 87, 67";
-    remove(courseData, ','); // removes the commas in-place
-    teddy.addCourse(courseData);
-    string course2Data = "422078053, BI110, 85, 80, 78, 83";
-    remove(course2Data, ',');
-    teddy.addCourse(course2Data);
-    teddy.print(); // prints the courses that teddy has taken
+    Student teddy("Teddy Hyde, 642176077");
+    
+    teddy.addCourse("453032915, CP164, 95, 64, 73, 60");
+    teddy.print();
+
+    cout << "\nCourse adding Test:\n"<<endl;
+
+    fstream file; 
+    file.open("CourseFile.txt",ios::in);
+    if (file.is_open()){
+        string line;
+        while (getline(file, line)){
+            teddy.addCourse(line);
+        }
+    }
+    file.close();
+
+    teddy.print();
+
     return 0;
 }
