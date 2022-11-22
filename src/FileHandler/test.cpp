@@ -32,6 +32,21 @@ bool isnum(string line){
     } return true;
 }
 
+// Function to read the lines of a given file, append them to a vector, and to return the said vector
+vector<string> readlines(string filename){
+    fstream file; 
+    vector<string>lines;
+    file.open(filename,ios::in);
+    if (file.is_open()){
+        string line;
+        while (getline(file, line)){
+            lines.push_back(line);
+        }
+    }
+    file.close();
+    return lines;
+}
+
 // Course class (Each student will have many courses, each course of type Course)
 class Course{
 private: // Private Attributes
@@ -157,12 +172,13 @@ int main(){
     // sample data: 454730171, CP414, 69, 80, 72, 87
     
     Student teddy("Teddy Hyde, 642176077");
-    
+
     teddy.addCourse("453032915, CP164, 95, 64, 73, 60");
     teddy.print();
 
     cout << "\nCourse adding Test:\n"<<endl;
 
+    /*
     fstream file; 
     file.open("CourseFile.txt",ios::in);
     if (file.is_open()){
@@ -172,6 +188,13 @@ int main(){
         }
     }
     file.close();
+    */
+
+    vector<string> courses;
+    courses = readlines("CourseFile.txt");
+    for (int i=0; i<courses.size();i++){
+        teddy.addCourse(courses[i]);
+    }
 
     teddy.print();
 
