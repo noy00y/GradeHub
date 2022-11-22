@@ -152,7 +152,7 @@ public: // Public Methods
     void addCourse(string input){
         remove(input,',');
         Course course(input);
-        if (course.takenBy(studentID)){courses.push_back(course);N++;} else {cout<< course.code <<" was not taken by "<<name<<"."<<endl;}
+        if (course.takenBy(studentID)){courses.push_back(course);N++;}
         return;
     }
 
@@ -179,8 +179,12 @@ int main(){
     courses = readlines("CourseFile.txt");
     names = readlines("NameFile.txt");
 
-    for (int i=0;i<names.size();i++){
+    for (int i=0;i<names.size();i++){ // max complexity is still capped at N^2 (ignoring the usage of vectors)
         Student student(names[i]);
+        // add courses for each student
+        for (int j=0;j<courses.size();j++){
+            student.addCourse(courses[j]);
+        }
         student.print();
     }
 
