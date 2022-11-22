@@ -5,8 +5,10 @@
 #include <vector>
 #include <sstream>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 // TODO: Error handling (offence tactic: accept no errors)
+// TODO: Change how final grade is calcualted and stored, change how it is printed and stored (2 decimal places)
 
 // Function used to remove commas in place
 void remove(string &input, char toReplace){
@@ -52,8 +54,9 @@ class Course{
 private: // Private Attributes
     int studentID;
     int N; // number of scores (len of vector scores)
+    string finalScore; // NOTE: changing this a float breaks the code (add to testing notes?)
     vector<float> scores;
-    string finalScore;
+    
     
 public: // Public Attributes
     string code;
@@ -82,6 +85,12 @@ public: // Public Methods
                     if (isnum(line)&&line.size()==2){scores.push_back(stoi(line));N++;}
                 }
             } 
+            
+            // TODO: Calculate and set the final grade as a string?
+            double finalGrade=0.0;
+            int i=0;
+            for (i;i<scores.size()-1;i++){finalGrade+=(scores[i]/100)*20;}finalGrade+=((scores[i]/100)*40);
+            finalScore = to_string(finalGrade);
 
         } return;
     }
@@ -91,6 +100,7 @@ public: // Public Methods
         cout << "\tStudent ID: " << studentID << endl;
         cout << "\tCourse Code: " << code << endl;
         for (int i=0; i<N;i++){cout << "\tScore " << i+1 << ": " << scores[i] << endl;}
+        cout<< "\tFinal Grade: " << finalScore << endl;
         return;
     }
 
@@ -168,9 +178,7 @@ public: // Public Methods
 
 };
 
-int main(){
-    // NameFile.txt
-    
+int main(){    
     Student teddy("Teddy Hyde, 642176077");
 
     vector<string> courses; vector<string> names;
@@ -191,5 +199,8 @@ int main(){
     for (int i=0;i<students.size();i++){
         students[i].print();
     }
+
+    // ((float)score/100)*20 (or 40 depending on the weight)
+    
     return 0;
 }
