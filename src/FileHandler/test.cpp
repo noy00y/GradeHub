@@ -185,7 +185,11 @@ int main(){
         for (int j=0;j<courses.size();j++){
             student.addCourse(courses[j]);
         }
-        student.print();
+        students.push_back(student);
+    }
+
+    for (int i=0;i<students.size();i++){
+        students[i].print();
     }
     return 0;
 }
