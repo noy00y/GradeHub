@@ -134,10 +134,14 @@ public: // Public Methods
             if (line.size()!=0){
                 if (isnum(line)){studentID=stoi(line);}
                 else {
-                    name=line;
-                    if (!strIn.fail()){
-                        strIn >> line;
-                        name+= " "+line;
+                    if (name=="None"){
+                        name=line;
+                    } else {
+                        if (!strIn.fail()){
+                            strIn >> line;
+                            name.append(" ");
+                            name.append(line);
+                        }
                     }
                 }
             }
@@ -166,37 +170,19 @@ public: // Public Methods
 
 int main(){
     // NameFile.txt
-    // sample data: 642176077, Teddy Hyde
-    
-    // CourseFile.txt
-    // sample data: 454730171, CP414, 69, 80, 72, 87
     
     Student teddy("Teddy Hyde, 642176077");
 
-    teddy.addCourse("453032915, CP164, 95, 64, 73, 60");
-    teddy.print();
+    vector<string> courses; vector<string> names;
+    vector<Student> students;
 
-    cout << "\nCourse adding Test:\n"<<endl;
-
-    /*
-    fstream file; 
-    file.open("CourseFile.txt",ios::in);
-    if (file.is_open()){
-        string line;
-        while (getline(file, line)){
-            teddy.addCourse(line);
-        }
-    }
-    file.close();
-    */
-
-    vector<string> courses;
     courses = readlines("CourseFile.txt");
-    for (int i=0; i<courses.size();i++){
-        teddy.addCourse(courses[i]);
-    }
+    names = readlines("NameFile.txt");
 
-    teddy.print();
+    for (int i=0;i<names.size();i++){
+        Student student(names[i]);
+        student.print();
+    }
 
     return 0;
 }
