@@ -187,6 +187,5 @@ int main(){
         }
         student.print();
     }
-
     return 0;
 }
