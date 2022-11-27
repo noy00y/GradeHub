@@ -9,9 +9,8 @@
 #include <sstream>
 #include <iomanip>
 
-#include <student_handler.h>
-#include <course_handler.h>
-#include <utils.h>
+#include ".\CourseHandler\course_handler.hpp"
+#include ".\Utils\utils.hpp"
 
 using std::cout;
 using std::string;

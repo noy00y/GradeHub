@@ -9,8 +9,7 @@
 #include <cstdio>
 #include <sstream>
 
-#include <course_handler.h>
-#include <utils.h>
+#include ".\Utils\utils.hpp"
 
 using std::cout;
 using std::string;
