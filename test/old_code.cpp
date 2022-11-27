@@ -9,44 +9,7 @@ using namespace std;
 // TODO: Error handling (offence tactic: accept no errors)
 // TODO: Change how final grade is calcualted and stored, change how it is printed and stored (2 decimal places)
 
-// Function used to remove commas in place
-void remove(string &input, char toReplace){
-    int len = input.size();
-    for (int i=0; i<len ;i++){
-        if (input[i]==toReplace){
-            input.erase(i--,1);
-            len = input.size();
-        }
-    }
-    return;
-}
 
-// Function used to check if the given string only contains numbers
-bool isnum(string line){
-    stringstream strIn(line);
-    char character;
-    while (!strIn.fail()){
-        strIn >> character;
-        if (!isdigit(character)){
-            return false;
-        }
-    } return true;
-}
-
-// Function to read the lines of a given file, append them to a vector, and to return the said vector
-vector<string> readlines(string filename){
-    fstream file; 
-    vector<string>lines;
-    file.open(filename,ios::in);
-    if (file.is_open()){
-        string line;
-        while (getline(file, line)){
-            lines.push_back(line);
-        }
-    }
-    file.close();
-    return lines;
-}
 
 // Course class (Each student will have many courses, each course of type Course)
 class Course{
