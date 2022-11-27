@@ -42,6 +42,15 @@
         "ctime": "cpp",
         "iomanip": "cpp",
         "xlocmon": "cpp",
-        "xloctime": "cpp"
-    }
+        "xloctime": "cpp",
+        "algorithm": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "iterator": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
