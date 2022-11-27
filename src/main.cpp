@@ -1,7 +1,7 @@
-#include "file_handler.h"
-#include "student_handler.h"
-#include "course_handler.h"
-#include "utils.h"
+#include "FileHandler\file_handler.hpp"
+#include "StudentHandler\student_handler.hpp"
+#include "CourseHandler\course_handler.hpp"
+#include "Utils\utils.hpp"
 
 int main() {
     StudentHandler teddy("Teddy Hyde, 642176077");
