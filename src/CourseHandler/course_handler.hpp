@@ -9,7 +9,7 @@
 #include <cstdio>
 #include <sstream>
 
-#include ".\Utils\utils.hpp"
+#include "..\Utils\utils.hpp"
 
 using std::cout;
 using std::string;
@@ -29,8 +29,8 @@ class CourseHandler {
 
           CourseHandler(string data);
 
-          void print() { return };
-          bool taken_by(int given_ID) { return given_ID == studentID };
+          void print() { return;};
+          bool taken_by(int given_ID) { return given_ID == studentID;};
 };
 
 #endif /* COURSE_HANDLER_H */

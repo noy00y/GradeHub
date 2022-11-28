@@ -9,8 +9,8 @@
 #include <sstream>
 #include <iomanip>
 
-#include ".\CourseHandler\course_handler.hpp"
-#include ".\Utils\utils.hpp"
+#include "..\CourseHandler\course_handler.hpp"
+#include "..\Utils\utils.hpp"
 
 using std::cout;
 using std::string;
@@ -27,11 +27,11 @@ class StudentHandler {
           int num_courses;
 
      public:
-          StudentHandler(string studentName, int ID) { return };
-          StudentHandler(string data) { return };
-          void add_course(string input) { return };
-          void print() { return };
+          StudentHandler(string studentName, int ID) { return;};
+          StudentHandler(string data) { return;};
+          void add_course(string input) { return;};
+          void print() { return;};
 
-}
+};
 
 #endif /* STUDENT_HANDLER_H */
