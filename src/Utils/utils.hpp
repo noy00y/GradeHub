@@ -1,5 +1,5 @@
-#ifndef UTILS_HEADER_H /* UTILS_HEADER_H */
-#define UTILS_HEADER_H
+#ifndef UTILS_HEADER_HPP_ /* UTILS_HEADER_HPP_ */
+#define UTILS_HEADER_HPP_
 
 #include <iostream>
 #include <fstream>
@@ -17,4 +17,4 @@ void remove(string &input, char to_replace);
 bool isnum(string line);
 vector<string> readlines(string filename);
 
-#endif /* UTILS_HEADER_H */
+#endif /* UTILS_HEADER_HPP_ */

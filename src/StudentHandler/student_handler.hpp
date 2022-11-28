@@ -1,5 +1,5 @@
-#ifndef STUDENT_HANDLER_H /* STUDENT_HANDLER_H */
-#define STUDENT_HANDLER_H
+#ifndef STUDENT_HANDLER_HPP_ /* STUDENT_HANDLER_HPP_ */
+#define STUDENT_HANDLER_HPP_
 
 #include <iostream>
 #include <cstdio>
@@ -9,15 +9,10 @@
 #include <sstream>
 #include <iomanip>
 
-#include ".\CourseHandler\course_handler.hpp"
-#include ".\Utils\utils.hpp"
+#include "../CourseHandler/course_handler.hpp"
+#include "../Utils/utils.hpp"
 
-using std::cout;
-using std::string;
-using std::vector;
-using std::fstream;
-using std::stringstream;
-using std::ios;
+using namespace std;
 
 class StudentHandler {
      private:
@@ -27,11 +22,12 @@ class StudentHandler {
           int num_courses;
 
      public:
-          StudentHandler(string studentName, int ID) { return };
-          StudentHandler(string data) { return };
-          void add_course(string input) { return };
-          void print() { return };
+          StudentHandler(string studentName, int ID);
+          StudentHandler(string data);
+          // ~StudentHandler();
+          void add_course(string input);
+          void print();
 
-}
+};
 
-#endif /* STUDENT_HANDLER_H */
+#endif /* STUDENT_HANDLER_HPP_ */

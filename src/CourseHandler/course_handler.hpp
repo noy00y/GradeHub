@@ -1,5 +1,5 @@
-#ifndef COURSE_HANDLER_H /* COURSE_HANDLER_H */
-#define COURSE_HANDLER_H
+#ifndef COURSE_HANDLER_HPP_ /* COURSE_HANDLER_HPP_ */
+#define COURSE_HANDLER_HPP_
 
 #include <iostream>
 #include <fstream>
@@ -9,28 +9,23 @@
 #include <cstdio>
 #include <sstream>
 
-#include ".\Utils\utils.hpp"
+#include "../Utils/utils.hpp" 
 
-using std::cout;
-using std::string;
-using std::vector;
-using std::stringstream;
-using std::to_string;
+using namespace std;
 
 class CourseHandler {
      private:
           int studentID;
           int num_scores; 
-          string finalScore; 
+          string final_score; 
           vector<float> scores;
 
      public:
           string code;
-
-          CourseHandler(string data);
-
-          void print() { return };
-          bool taken_by(int given_ID) { return given_ID == studentID };
+          CourseHandler(string data); // Constructor
+          // ~CourseHandler(); // Deconstructor
+          void print();
+          bool taken_by(int given_ID);
 };
 
-#endif /* COURSE_HANDLER_H */
+#endif /* COURSE_HANDLER_HPP_ */

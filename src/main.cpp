@@ -1,7 +1,7 @@
-#include "FileHandler\file_handler.hpp"
-#include "StudentHandler\student_handler.hpp"
-#include "CourseHandler\course_handler.hpp"
-#include "Utils\utils.hpp"
+#include "FileHandler/file_handler.hpp"
+#include "StudentHandler/student_handler.hpp"
+#include "CourseHandler/course_handler.hpp"
+#include "Utils/utils.hpp"
 
 int main() {
     StudentHandler teddy("Teddy Hyde, 642176077");
@@ -16,7 +16,7 @@ int main() {
         StudentHandler student(names[i]);
         // add courses for each student
         for (int j=0;j<courses.size();j++){
-            student.addCourse(courses[j]);
+            student.add_course(courses[j]);
         }
         students.push_back(student);
     }
