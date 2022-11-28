@@ -1,5 +1,5 @@
-#ifndef FILE_HANDLER_HPP_ // FILE_HANDLER_HPP_
-#define FILE_HANDLER_HPP_
+#ifndef FILE_HANDLER_H // FILE_HANDLER_H
+#define FILE_HANDLER_H
 
 #include <iostream>
 #include <fstream>
@@ -7,16 +7,15 @@
 #include <vector>
 #include <iomanip>
 #include <cstdio>
-using namespace std;
+// using namespace std;
 
-class FileHandler{
-public:
-    string filename;
-public:
-    FileHandler();
-    // ~FileHandler(); // not sure if a deconstructor is needed here
-    vector<vector<string> > readlines();
-    void print(vector<string> lines);
-};
+// class FileHandler{
+// public:
+//     string filename;
+// public:
+//     FileHandler();
+//     vector<vector<string>> readlines();
+//     void print();
+// };
 
-#endif // FILE_HANDLER_HPP_
+#endif // FILE_HANDLER_H
