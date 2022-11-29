@@ -37,6 +37,12 @@ CourseHandler:: CourseHandler(string data) {
      return;
 }
 
+/*
+* 
+* Print the objects data.
+* Returns nothing.
+* 
+*/
 void CourseHandler::print() {
      cout << "\tStudent ID: " << studentID << "\n";
      cout << "\tCourse Code: " << code << "\n";
@@ -46,7 +52,12 @@ void CourseHandler::print() {
      cout<< "\tFinal Grade: " << final_score << "\n";
      return;
 }
-          
+
+/*
+* 
+* Returns true if the given student took the current course & false otherwise.
+* 
+*/       
 bool CourseHandler::taken_by(int given_ID) {
      return given_ID == studentID;
 }

@@ -20,6 +20,15 @@ using std::fstream;
 using std::stringstream;
 using std::ios;
 
+/*
+* 
+* Student Handler Object
+* ==================================
+* Description: 
+*     This object is used to handle 
+*     each student & their courses
+* ==================================
+*/
 class StudentHandler {
      /*
      * 

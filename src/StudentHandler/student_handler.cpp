@@ -2,15 +2,7 @@
 #include "..\CourseHandler\course_handler.hpp"
 #include "..\Utils\utils.hpp"
 
-/*
-* 
-* Student Handler Object
-* ==================================
-* Description: 
-*     This object is used to handle 
-*     each student & their courses
-* ==================================
-*/
+
 StudentHandler:: StudentHandler(string studentName, int ID) { 
      name = studentName;
      studentID = ID;
@@ -45,6 +37,12 @@ StudentHandler:: StudentHandler(string data) {
      }
 }
 
+/*
+* 
+* Adds a course object to the student's list of courses.
+* Returns nothing.
+* 
+*/
 void StudentHandler::add_course(string input) {
      remove(input,',');
      CourseHandler course(input);
@@ -54,7 +52,13 @@ void StudentHandler::add_course(string input) {
      }
      return;
 }
-          
+
+/*
+* 
+* Prints the data and calls print on the course objects when called.    
+* Returns nothing.
+* 
+*/
 void StudentHandler::print() {
      cout << "Student Name: " << name << "\n";
      cout << "Student ID: " << studentID << "\n";

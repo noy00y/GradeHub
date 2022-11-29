@@ -2,7 +2,7 @@
 #include "StudentHandler\student_handler.hpp"
 #include "CourseHandler\course_handler.hpp"
 #include "Utils\utils.hpp"
-using namespace std;
+using namespace std; // change to individual std::
 
 int main() {
     StudentHandler teddy("Teddy Hyde, 642176077");
@@ -10,8 +10,8 @@ int main() {
 
 
     // create instances of filehandler for each of the files and read the files lines
-    FileHandler courses("C:/Users/Harri/Desktop/dev/Software-Engineering-Project/data/CourseFile.txt"); 
-    FileHandler names("C:/Users/Harri/Desktop/dev/Software-Engineering-Project/data/NameFile.txt"); 
+    FileHandler courses("../data/CourseFile.txt"); 
+    FileHandler names("../data/NameFile.txt"); 
     courses.readlines();
     names.readlines();
     // vector containing student objects
