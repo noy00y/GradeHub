@@ -14,9 +14,8 @@ FileHandler::FileHandler(string u_filename){
      return;
 }
 
-vector<string> FileHandler::readlines(){
+void FileHandler::readlines(){
      fstream file; 
-     vector<string>lines;
      file.open(filename,ios::in);
      if (file.is_open()){
           string line;
@@ -25,10 +24,10 @@ vector<string> FileHandler::readlines(){
           }
      }
      file.close();
-     return lines;
+     return;
 }
 
-void FileHandler::print(vector<string> lines){
+void FileHandler::print(){
      for (int i=0;i<lines.size();i++){
           cout<<lines[i]<<endl;
      }

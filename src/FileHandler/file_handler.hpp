@@ -19,10 +19,11 @@ using std::ios;
 class FileHandler{
 public:
     string filename;
+    vector<string>lines;
 public:
     FileHandler(string u_filename);
-    vector<string> readlines();
-    void print(vector<string>lines);
+    void readlines();
+    void print();
 };
 
 #endif // FILE_HANDLER_H
