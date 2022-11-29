@@ -33,6 +33,12 @@ CourseHandler:: CourseHandler(string data) {
           }
           final_grade +=((scores[i] / 100) * 40);
           final_score = to_string(final_grade);
+          // trim the final score to have only one digit after the decimal point
+          if (final_score.size()>3){ // two digits, a decimal and more
+               string trimmed_final_score="";
+               trimmed_final_score.append(final_score,0,4);
+               final_score = trimmed_final_score;
+          } 
      } 
      return;
 }

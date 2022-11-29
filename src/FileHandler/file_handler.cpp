@@ -33,3 +33,8 @@ void FileHandler::print(){
      }
      return;
 }
+
+void FileHandler::set_lines(vector<string>u_lines){
+     lines = u_lines;
+     return;
+}

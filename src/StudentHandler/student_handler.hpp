@@ -15,6 +15,7 @@
 using std::cout;
 using std::endl;
 using std::string;
+using std::ofstream;
 using std::vector;
 using std::fstream;
 using std::stringstream;
@@ -58,7 +59,7 @@ class StudentHandler {
           StudentHandler(string data);
           void add_course(string input);
           void print();
-
+          void store(string filename);
 };
 
 #endif /* STUDENT_HANDLER_H */

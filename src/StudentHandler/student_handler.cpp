@@ -60,13 +60,19 @@ void StudentHandler::add_course(string input) {
 * 
 */
 void StudentHandler::print() {
-     cout << "Student Name: " << name << "\n";
-     cout << "Student ID: " << studentID << "\n";
-     cout << "Number of courses: " << num_courses << "\n";
-     cout << "Courses: " << "\n";
-
-     for (int i = 0; i < num_courses; i++) {
-          courses[i].print();
-     }    
+     for (int i=0;i<courses.size();i++){
+          cout << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
+     }
      return;
 }     
+
+void StudentHandler::store(string filepath){
+     // Should be done through the FileHandler (setting lines)
+     ofstream file;
+     file.open(filepath,std::ios_base::app);
+     for (int i=0;i<courses.size();i++){
+          file << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
+     }
+     file.close();
+     return;
+}

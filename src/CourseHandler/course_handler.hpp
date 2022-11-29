@@ -40,7 +40,6 @@ class CourseHandler {
      private:
           int studentID;
           int num_scores; 
-          string final_score; 
           vector<float> scores;
      /*
      * 
@@ -53,6 +52,7 @@ class CourseHandler {
      */    
      public:
           string code;
+          string final_score; // made public as it may required for calculations such as the average etc. 
           CourseHandler(string data);
           void print();
           bool taken_by(int given_ID);

@@ -26,8 +26,9 @@ int main() {
         students.push_back(student);
     }
 
+    string output_file_path = "../data/Output.txt"; // does not clean the file if it is already in the path
     for (int i=0;i<students.size();i++){
-        students[i].print();
+        students[i].store(output_file_path);
     }
     
     return 0;

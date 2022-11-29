@@ -13,6 +13,7 @@ using std::endl;
 using std::string;
 using std::vector;
 using std::fstream;
+using std::ofstream;
 using std::stringstream;
 using std::ios;
 
@@ -24,6 +25,7 @@ public:
     FileHandler(string u_filename);
     void readlines();
     void print();
+    void set_lines(vector<string>u_lines);
 };
 
 #endif // FILE_HANDLER_H
