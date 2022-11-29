@@ -2,7 +2,6 @@
 #include "StudentHandler\student_handler.hpp"
 #include "CourseHandler\course_handler.hpp"
 #include "Utils\utils.hpp"
-using namespace std; // change to individual std::
 
 int main() {
     StudentHandler teddy("Teddy Hyde, 642176077");
