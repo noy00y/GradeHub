@@ -4,9 +4,7 @@
 #include "Utils\utils.hpp"
 
 int main() {
-    StudentHandler teddy("Teddy Hyde, 642176077");
-    teddy.print();
-
+    
     // create instances of filehandler for each of the files and read the files lines
     FileHandler courses("../data/CourseFile.txt"); 
     FileHandler names("../data/NameFile.txt"); 
