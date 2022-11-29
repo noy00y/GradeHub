@@ -45,15 +45,15 @@ StudentHandler:: StudentHandler(string data) {
      }
 }
 
-// void StudentHandler::add_course(string input) {
-//      remove(input,',');
-//      CourseHandler course(input);
-//      if (course.taken_by(studentID)) {
-//           courses.push_back(course);
-//           num_courses++;
-//      }
-//      return;
-// }
+void StudentHandler::add_course(string input) {
+     remove(input,',');
+     CourseHandler course(input);
+     if (course.taken_by(studentID)) {
+          courses.push_back(course);
+          num_courses++;
+     }
+     return;
+}
           
 void StudentHandler::print() {
      cout << "Student Name: " << name << "\n";
@@ -66,11 +66,3 @@ void StudentHandler::print() {
      }    
      return;
 }     
-
-
-int main(){
-     cout << "In main" << endl;
-     StudentHandler teddy("Teddy Hyde, 642176077");
-     teddy.print();
-     return 0;
-}
