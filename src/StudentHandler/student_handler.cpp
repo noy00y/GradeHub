@@ -22,7 +22,7 @@ StudentHandler:: StudentHandler(string data) {
      name = "None";
      studentID = 0;
      num_courses = 0;
-     cout << data << endl;
+     remove(data,',');
      stringstream strIn(data);
      string line;
 
