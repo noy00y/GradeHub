@@ -7,15 +7,22 @@
 #include <vector>
 #include <iomanip>
 #include <cstdio>
-// using namespace std;
 
-// class FileHandler{
-// public:
-//     string filename;
-// public:
-//     FileHandler();
-//     vector<vector<string>> readlines();
-//     void print();
-// };
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
+using std::fstream;
+using std::stringstream;
+using std::ios;
+
+class FileHandler{
+public:
+    string filename;
+public:
+    FileHandler(string u_filename);
+    vector<string> readlines();
+    void print(vector<string>lines);
+};
 
 #endif // FILE_HANDLER_H
