@@ -6,8 +6,12 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <cstdio>
+#include <iomanip>
 
 using std::string;
+using std:: cout;
+using std:: endl;
 using std::vector;
 using std::fstream;
 using std::stringstream;
