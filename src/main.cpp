@@ -8,7 +8,6 @@ int main() {
     StudentHandler teddy("Teddy Hyde, 642176077");
     teddy.print();
 
-
     // create instances of filehandler for each of the files and read the files lines
     FileHandler courses("../data/CourseFile.txt"); 
     FileHandler names("../data/NameFile.txt"); 
@@ -20,6 +19,7 @@ int main() {
     for (int i=0;i<names.lines.size();i++){ // max complexity is still capped at N^2 (ignoring the usage of vectors)
         StudentHandler student(names.lines[i]);
         // add courses for each student
+        
         for (int j=0;j<courses.lines.size();j++){
             student.add_course(courses.lines[j]);
         }
