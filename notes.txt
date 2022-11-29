@@ -1,0 +1,6 @@
+Errors that can be handled:
+    - Names given without last names in the NameFile
+    - Skips grades that do not have a valid studentID
+    - Generates the final score with 0 as the final exam score when called with just a missing final grade
+    - If the number of scores given per course entry is not exactly 4, a error message is displayed
+    - Added feature to clean the file

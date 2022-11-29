@@ -25,7 +25,10 @@ CourseHandler:: CourseHandler(string data) {
                }
           } 
 
-          // Calculate the final grade
+
+          // Offensive error handling: Ignore all the grade entires that have less or more than 4 scores as this program is tailored for handling 4 scores
+          if (scores.size()==4){
+                         // Calculate the final grade
           double final_grade = 0.0;
           int i;
           for (i=0; i<scores.size()-1; i++) {
@@ -39,6 +42,11 @@ CourseHandler:: CourseHandler(string data) {
                trimmed_final_score.append(final_score,0,4);
                final_score = trimmed_final_score;
           } 
+          } else {
+               scores.clear(); // clear all the scores
+               // set the final score as an error message
+               final_score = "Invalid number of scores given for this course";
+          }
      } 
      return;
 }

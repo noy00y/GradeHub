@@ -17,8 +17,6 @@ int main() {
     
     for (int i=0;i<names.lines.size();i++){ // max complexity is still capped at N^2 (ignoring the usage of vectors)
         StudentHandler student(names.lines[i]);
-        // add courses for each student
-        
         for (int j=0;j<courses.lines.size();j++){
             student.add_course(courses.lines[j]);
         }
@@ -26,6 +24,9 @@ int main() {
     }
 
     string output_file_path = "../data/Output.txt"; // does not clean the file if it is already in the path
+    std::ifstream File;
+    File.open(output_file_path, std::ifstream::trunc | std::ifstream::out); // open the file for outputting and close it to clear the file
+    File.close();
     for (int i=0;i<students.size();i++){
         students[i].store(output_file_path);
     }
