@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp FileHandler/file_handler.cpp FileHandler/file_handler.hpp CourseHandler/course_handler.cpp CourseHandler/course_handler.hpp StudentHandler/student_handler.cpp StudentHandler/student_handler.hpp Utils/utils.cpp Utils/utils.hpp
+	g++ main.cpp FileHandler/file_handler.cpp CourseHandler/course_handler.cpp StudentHandler/student_handler.cpp Utils/utils.cpp
