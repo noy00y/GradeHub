@@ -8,6 +8,8 @@
 
 </div>
 
+## Description
+> This program utilizes objects and manipulates the abstraction, encapsulation, inheritance and polymorphism principles of object-oriented programming in order to rapidly read from two input files which then combines and calculates the data to writes to an output file
 
 ## Usage
 
