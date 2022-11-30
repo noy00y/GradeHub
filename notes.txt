@@ -4,3 +4,4 @@ Errors that can be handled:
     - Generates the final score with 0 as the final exam score when called with just a missing final grade
     - If the number of scores given per course entry is not exactly 4, a error message is displayed
     - Added feature to clean the file
+    - Test > 100, < 0 for grades
