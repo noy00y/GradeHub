@@ -3,13 +3,16 @@
 # _GradeHub_
 
 ### A fast system that combines, calculates and formats data with ease
-![CPP](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![GitHub](https://img.shields.io/github/license/noy00y/Software-Engineering-Project?style=flat-square)
+  
+ </div>
 
-</div>
+
+
 
 ## Description
-> This program utilizes objects and manipulates the abstraction, encapsulation, inheritance and polymorphism principles of object-oriented programming in order to rapidly read from two input files which then combines and calculates the data to writes to an output file
+> This program utilizes objects and manipulates the abstraction, encapsulation, inheritance and polymorphism principles of object-oriented programming in order to rapidly read from two input files which then combines and calculates the data to writes to an output file <br/>
+
+![GitHub](https://img.shields.io/github/license/noy00y/GradeHub?style=flat-square)
 
 ## Usage
 
