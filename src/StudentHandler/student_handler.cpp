@@ -1,12 +1,10 @@
 #include "student_handler.hpp"
-#include "..\CourseHandler\course_handler.hpp"
-#include "..\Utils\utils.hpp"
-
 
 StudentHandler:: StudentHandler(string studentName, int ID) { 
      name = studentName;
      studentID = ID;
      num_courses = 0;
+
      return;
 }
 
@@ -14,6 +12,7 @@ StudentHandler:: StudentHandler(string data) {
      name = "None";
      studentID = 0;
      num_courses = 0;
+
      remove(data,',');
      stringstream strIn(data);
      string line;
@@ -60,19 +59,22 @@ void StudentHandler::add_course(string input) {
 * 
 */
 void StudentHandler::print() {
-     for (int i=0;i<courses.size();i++){
+     for (int i = 0; i < courses.size(); i++) {
           cout << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
      }
      return;
 }     
 
-void StudentHandler::store(string filepath){
+void StudentHandler::store(string filepath) {
      // Should be done through the FileHandler (setting lines)
      ofstream file;
-     file.open(filepath,std::ios_base::app);
-     for (int i=0;i<courses.size();i++){
+     file.open(filepath, std::ios_base::app);
+
+     for (int i = 0; i < courses.size(); i++){
           file << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
      }
+
      file.close();
+
      return;
 }
