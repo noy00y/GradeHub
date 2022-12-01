@@ -71,7 +71,11 @@ void StudentHandler::store(string filepath) {
      file.open(filepath, std::ios_base::app);
 
      for (int i = 0; i < courses.size(); i++){
-          file << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
+          if (courses[i].final_score=="Invalid number of scores given for this course"){
+               cout << studentID << " " << courses[i].final_score << ": " << courses[i].code << endl;
+          } else {
+               file << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
+          }
      }
 
      file.close();
