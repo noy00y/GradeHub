@@ -1,10 +1,13 @@
 #include "student_handler.hpp"
+#include "..\CourseHandler\course_handler.hpp"
+#include "..\Utils\utils.hpp"
+#include "..\FileHandler\file_handler.hpp"
+
 
 StudentHandler:: StudentHandler(string studentName, int ID) { 
      name = studentName;
      studentID = ID;
      num_courses = 0;
-
      return;
 }
 
@@ -12,7 +15,6 @@ StudentHandler:: StudentHandler(string data) {
      name = "None";
      studentID = 0;
      num_courses = 0;
-
      remove(data,',');
      stringstream strIn(data);
      string line;
@@ -59,26 +61,17 @@ void StudentHandler::add_course(string input) {
 * 
 */
 void StudentHandler::print() {
-     for (int i = 0; i < courses.size(); i++) {
+     for (int i=0;i<courses.size();i++){
           cout << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
      }
      return;
 }     
 
-void StudentHandler::store(string filepath) {
-     // Should be done through the FileHandler (setting lines)
-     ofstream file;
-     file.open(filepath, std::ios_base::app);
-
-     for (int i = 0; i < courses.size(); i++){
-          if (courses[i].final_score=="Invalid number of scores given for this course"){
-               cout << studentID << " " << courses[i].final_score << ": " << courses[i].code << endl;
-          } else {
-               file << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
-          }
+void StudentHandler::store(string filepath){
+     FileHandler outputfile("../data/Output.txt");
+     for (int i=0;i<courses.size();i++){
+          string data = std::to_string(studentID) + ", " + name + ", " + courses[i].code + ", " + courses[i].final_score + "\n";
+          outputfile.set_lines(data);
      }
-
-     file.close();
-
      return;
 }
