@@ -8,8 +8,10 @@ int main() {
     // create instances of filehandler for each of the files and read the files lines
     FileHandler courses("../data/CourseFile.txt"); 
     FileHandler names("../data/NameFile.txt"); 
+    
     courses.readlines();
     names.readlines();
+
     // vector containing student objects
     vector<StudentHandler> students; 
     
@@ -22,9 +24,9 @@ int main() {
     }
 
     string output_file_path = "../data/Output.txt"; // does not clean the file if it is already in the path
-    std::ifstream File;
-    File.open(output_file_path, std::ifstream::trunc | std::ifstream::out); // open the file for outputting and close it to clear the file
-    File.close();
+    FileHandler outputfile(output_file_path);
+    outputfile.clearfile();
+
     for (int i=0;i<students.size();i++){
         students[i].store(output_file_path);
     }

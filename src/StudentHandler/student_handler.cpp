@@ -1,6 +1,7 @@
 #include "student_handler.hpp"
 #include "..\CourseHandler\course_handler.hpp"
 #include "..\Utils\utils.hpp"
+#include "..\FileHandler\file_handler.hpp"
 
 
 StudentHandler:: StudentHandler(string studentName, int ID) { 
@@ -67,12 +68,10 @@ void StudentHandler::print() {
 }     
 
 void StudentHandler::store(string filepath){
-     // Should be done through the FileHandler (setting lines)
-     ofstream file;
-     file.open(filepath,std::ios_base::app);
+     FileHandler outputfile("../data/Output.txt");
      for (int i=0;i<courses.size();i++){
-          file << studentID << ", " << name <<", "<< courses[i].code << ", " << courses[i].final_score << endl;
+          string data = std::to_string(studentID) + ", " + name + ", " + courses[i].code + ", " + courses[i].final_score + "\n";
+          outputfile.set_lines(data);
      }
-     file.close();
      return;
 }

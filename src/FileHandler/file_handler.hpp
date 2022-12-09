@@ -25,7 +25,8 @@ public:
     FileHandler(string u_filename);
     void readlines();
     void print();
-    void set_lines(vector<string>u_lines);
+    void set_lines(string linetowrite);
+    void clearfile(); // Creates a clear file, or clears existing file
 };
 
 #endif // FILE_HANDLER_H
