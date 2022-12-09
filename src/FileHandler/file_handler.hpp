@@ -28,3 +28,5 @@ public:
     void set_lines(string linetowrite);
     void clearfile(); // Creates a clear file, or clears existing file
 };
+
+#endif
